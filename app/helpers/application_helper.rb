@@ -1,7 +1,9 @@
 module ApplicationHelper
-  def sortable(colum, title = nil)
-    title ||= colum.titleize
-    direction = column == params[:sort] && params[:direction] == "asc" ? "dsc" : "asc"
-    link_to title, :sort => column, :direction => direction
-  end
+    def helper_method(field)
+        if(params[:sort].to_s == field)
+            return 'hilite'
+        else
+            return nil
+        end
+    end
 end
