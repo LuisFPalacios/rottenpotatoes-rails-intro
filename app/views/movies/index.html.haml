@@ -4,9 +4,9 @@
 %table#movies
   %thead
     %tr
-      %th <a href = "title_header">Movie Title</a>
-      %th Rating
-      %th <a href = "release_date_header">Release Date</a>
+      %th sortable "movie"
+      %th link_to Rating
+      %th sortable "release_date", "Released"
       %th More Info
   %tbody
     - @movies.each do |movie|
